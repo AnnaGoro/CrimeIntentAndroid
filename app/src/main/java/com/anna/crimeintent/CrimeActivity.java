@@ -1,17 +1,18 @@
 package com.anna.crimeintent;
 
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+public class CrimeActivity extends FragmentActivity {
 
-    private static final String TAG = MainActivity.class.getSimpleName() ;
+    private static final String TAG = CrimeActivity.class.getSimpleName() ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_crime);
         Log.d(TAG , "onCreate");
     }
 }
