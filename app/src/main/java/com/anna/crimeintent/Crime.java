@@ -1,6 +1,8 @@
 package com.anna.crimeintent;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -10,14 +12,17 @@ public class Crime {
 
     private UUID mId;
     private String mTitle;
-    private Date mDate;
+    private String mDate;
     private boolean mSolved;
+    SimpleDateFormat dateFormat;
+
 
 
     public Crime () {
 
         mId = UUID.randomUUID();
-        mDate = new Date();
+        dateFormat = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
+        mDate = dateFormat.format( new Date() ) ;
 
     }
 
@@ -35,11 +40,11 @@ public class Crime {
         mTitle = title;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return mDate;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         mDate = date;
     }
 
