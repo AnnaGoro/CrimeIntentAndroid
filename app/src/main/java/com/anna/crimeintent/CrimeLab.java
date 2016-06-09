@@ -15,6 +15,7 @@ public class CrimeLab {
     List<Crime> mCrimes;
 
     public CrimeLab(Context context) {
+
         mCrimes = new ArrayList<Crime>();
     }
 
@@ -39,4 +40,6 @@ public class CrimeLab {
         }
         return null;
     }
+
+
 }
