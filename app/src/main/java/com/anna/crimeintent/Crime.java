@@ -12,17 +12,17 @@ public class Crime {
 
     private UUID mId;
     private String mTitle;
-    private String mDate;
+    private Date mDate;
     private boolean mSolved;
-    SimpleDateFormat dateFormat;
+ //   SimpleDateFormat dateFormat;
 
 
 
     public Crime () {
 
         mId = UUID.randomUUID();
-        dateFormat = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
-        mDate = dateFormat.format( new Date() ) ;
+       // dateFormat = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
+        mDate = new Date() ;
 
     }
 
@@ -40,11 +40,11 @@ public class Crime {
         mTitle = title;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return mDate;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         mDate = date;
     }
 
