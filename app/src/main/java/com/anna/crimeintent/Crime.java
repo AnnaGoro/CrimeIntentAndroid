@@ -14,22 +14,26 @@ public class Crime {
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
- //   SimpleDateFormat dateFormat;
+    //   SimpleDateFormat dateFormat;
 
 
+    public Crime() {
+        this(UUID.randomUUID());
 
-    public Crime () {
+        //mId = UUID.randomUUID();
+        // dateFormat = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
+        //  mDate = new Date() ;
 
-        mId = UUID.randomUUID();
-       // dateFormat = new SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
-        mDate = new Date() ;
+    }
 
+    public Crime (UUID id) {
+        mId = id;
+        mDate = new Date();
     }
 
     public UUID getId() {
         return mId;
     }
-
 
 
     public String getTitle() {
